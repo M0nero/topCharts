@@ -17,8 +17,9 @@ cd topCharts
 python manage.py runserver
 ~~~
 
-##Examples
+## Examples
 
+In order to see the charts, run server and follow the link 
 ![alt text](https://user-images.githubusercontent.com/74233809/153492329-73ec4801-c644-4dee-97cd-5052baf892a0.jpg)
 
 ![alt text](https://user-images.githubusercontent.com/74233809/153492335-95e6d854-4e33-4093-9fd3-cc571dd51b04.jpg)

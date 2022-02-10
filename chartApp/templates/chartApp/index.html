@@ -1,0 +1,64 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+    <script>
+    data = {
+          labels: {{ labels|safe }},
+          datasets: [
+                {
+                    label: "accounts",
+                    data: {{ data }},
+                }
+          ]
+      };
+    options = {
+        plugins: {
+            legend: {
+              display: false,
+            }
+        },
+        scales: {
+            y: {
+              beginAtZero: true,
+            },
+            x: {
+                ticks: {
+                    display: false
+                }
+            }
+        },
+      };
+</script>
+    <div class="d-flex flex-row justify-content-between">
+        <div class="col">
+        <canvas id="pie-chart"></canvas>
+        <script>
+          const pieChart = new Chart(document.getElementById("pie-chart"), {
+            type: "pie",
+            data: data,
+            options: options,
+          });
+        </script>
+      <div class="col">
+        <canvas id="line-chart"></canvas>
+        <script>
+          const lineChart = new Chart(document.getElementById("line-chart"), {
+            type: "line",
+            data: data,
+            options: options,
+          });
+        </script>
+      </div>
+      <div class="col">
+        <canvas id="bar-chart"></canvas>
+        <script>
+          const barChart = new Chart(document.getElementById("bar-chart"), {
+            type: "bar",
+            data: data,
+            options: options,
+          });
+        </script>
+      </div>
+        </div>
+    </div>
+{% endblock %}

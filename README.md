@@ -16,3 +16,6 @@ cd topCharts
 cd topCharts
 python manage.py runserver
 ~~~
+
+##Examples
+
